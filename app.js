@@ -1,9 +1,9 @@
-import cardlist from "./cardlist.js";
+import cardList from "./cardList.js";
 const board = document.querySelector(".board");
 const message = document.querySelector(".message");
 const playBtn = document.querySelector(".btn");
 
-const cards = [...cardlist, ...cardlist]
+const cards = [...cardList, ...cardList]
   .sort(() => Math.random() - 0.5)
   .map((card) => {
     const div = document.createElement("div");

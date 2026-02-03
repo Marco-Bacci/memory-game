@@ -1,4 +1,4 @@
-const cardlist = [
+const cardList = [
   { dataName: 1, img: "img/1.png" },
   { dataName: 2, img: "img/2.png" },
   { dataName: 3, img: "img/3.png" },
@@ -11,4 +11,4 @@ const cardlist = [
   { dataName: 10, img: "img/10.png" },
 ];
 
-export default cardlist;
+export default cardList;
