@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(95, 161, 199);
+}
+
+.dancing-script{
+  font-family: Dancing Script, Arial, Helvetica, sans-serif ;
+}
+
+.board-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1vw;
+  width: 90vw;
+  max-width: 640px;
+  margin: auto;
+  padding: 1vw;
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.12);
+}
+
+.card:active {
+  transform: scale(95%);
+  transition: transform 0.2s;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.frontside,
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+}
+
+.frontside {
+  transform: rotateY(180deg);
+}
+
+.polaroid-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.polaroid-img {
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  width: 84%;
+  height: 68%;
+  object-fit: cover;
+}
+
+/************ MESSAGE************* */
+
+.message {
+  display: none;
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background-color: #ffffff;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
